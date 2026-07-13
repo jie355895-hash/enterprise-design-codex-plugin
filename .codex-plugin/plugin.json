@@ -1,0 +1,40 @@
+{
+  "name": "enterprise-design-codex-plugin",
+  "version": "1.1.42",
+  "description": "Enterprise product-manager and UI design workflow for SaaS industrial systems, based on external enterprise design standards from research and PRD confirmation to interactive Demo and user acceptance.",
+  "author": {
+    "name": "Enterprise Design Community"
+  },
+  "license": "MIT",
+  "keywords": ["product-design", "industrial-saas", "lims", "mes", "prototype", "ux-review"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Enterprise Design Codex Plugin",
+    "shortDescription": "从需求澄清到企业级产品 Demo",
+    "longDescription": "面向 SaaS 工业系统的产品经理与 UI 设计工作流，使用 Ant Design 5、Carbon Design System 和 WCAG 2.2 作为 UI 参考层，覆盖需求调研、PRD设计与确认、LIMS、MES、IoT、大屏、可交互Demo、Demo内说明、视觉验收、用户体验和版本记录。",
+    "developerName": "Enterprise Design Community",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write", "Product Design"],
+    "defaultPrompt": [
+      "按企业设计流程从需求调研开始分析这个产品需求",
+      "先输出文字确认稿，再生成PRD并根据确认后的PRD生成页面 Demo",
+      "按外部企业UI标准检查这个 Demo 的视觉、交互和可访问性"
+    ],
+    "brandColor": "#2563EB"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

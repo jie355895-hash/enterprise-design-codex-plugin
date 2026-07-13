@@ -1,0 +1,27 @@
+{
+  "status": "active",
+  "updatedAt": "",
+  "outputs": {
+    "业务内容文档": {
+      "currentVersion": "",
+      "currentPath": "",
+      "previousVersion": ""
+    },
+    "Demo": {
+      "currentVersion": "",
+      "currentPath": "",
+      "previousVersion": ""
+    },
+    "原型": {
+      "currentVersion": "",
+      "currentPath": "",
+      "previousVersion": ""
+    },
+    "技术依赖": {
+      "currentVersion": "",
+      "currentPath": "",
+      "previousVersion": ""
+    }
+  }
+}
+

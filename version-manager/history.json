@@ -1,0 +1,20 @@
+{
+  "plugin": "Enterprise Design Codex Plugin",
+  "version": "V1.1.42",
+  "baseVersion": "V1.1.41",
+  "releaseType": "sanitized-public-package",
+  "changes": [
+    "统一插件在 Codex 选择列表中的显示名称",
+    "整合项目初始化 Skill，支持空白文件夹的根项目和子项目判断",
+    "增加需求澄清、文字确认稿、PRD确认和Demo生成门槛",
+    "增加角色、数据范围、权限、流程和通知处理闭环规则",
+    "增加原型与Demo差异对比和用户确认流程",
+    "增加业务内容、Demo、原型和技术依赖的输出物版本管理",
+    "增加Ant Design 5、Carbon Design System、WCAG 2.2和ui-ux-pro-max参考层",
+    "移除内部项目名称、个人信息、绝对路径、原始项目来源和私有知识快照",
+    "仅保留可公开分发的通用工业产品设计参考"
+  ],
+  "status": "active",
+  "privacy": "sanitized-public-content"
+}
+

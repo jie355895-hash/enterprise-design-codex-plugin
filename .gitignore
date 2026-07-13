@@ -1,0 +1,27 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+
+# Local runtime and dependency output
+node_modules/
+dist/
+build/
+coverage/
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+
+# Generated project outputs and local backups
+project-backups/
+workspace-backups/
+private-knowledge/
+local-projects/

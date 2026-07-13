@@ -1,0 +1,8 @@
+interface:
+  display_name: Enterprise Design Codex Plugin
+  short_description: 企业级产品设计流程与项目自动初始化
+  default_prompt: Use $enterprise-design-project-bootstrap when a project folder is selected for enterprise product-design work.
+
+policy:
+  allow_implicit_invocation: true
+
