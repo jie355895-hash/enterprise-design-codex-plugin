@@ -20,5 +20,6 @@ Use the repository README as the public landing page. It contains the feature bo
 
 - Repository name and description contain no personal or client identity.
 - README explains installation, activation, project initialization, output folders, safety, and versions.
+- Public package includes the PRD comprehensive-validation and project-control templates.
 - No local absolute paths, usernames, emails, secrets, client names, project names, screenshots, original prototypes, or copied private documents remain.
 - Plugin manifest and bundled skills validate successfully.

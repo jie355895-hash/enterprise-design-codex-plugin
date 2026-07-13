@@ -16,7 +16,7 @@ Do not initialize these as projects:
 
 ## Root decision
 
-Use the selected empty folder as the standalone project root when it has no initialized project ancestor and is not a protected output or workspace folder. This includes a direct child of `<WORKSPACE_ROOT>` and an empty folder inside an ordinary non-project container. Do not move the folder into another container; the selected workspace and project context determine the working location.
+Use the selected empty folder as the standalone project root when it has no initialized project ancestor and is not a protected output or workspace folder. This includes a direct child of `<WORKSPACE_ROOT>` and an empty folder inside an ordinary non-project container. Do not move the folder into another container; existing absolute paths and workspace automation depend on the current location.
 
 ## Child decision
 

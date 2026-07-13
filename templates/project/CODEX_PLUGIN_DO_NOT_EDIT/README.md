@@ -4,5 +4,6 @@ This folder contains Enterprise Design Codex Plugin files, project-control recor
 
 `PROGRAM_FILES` contains scripts required by the project workflow.
 
-Do not delete, rename, or manually edit files in this folder. Use the project creation and rule synchronization tools to update them.
+`prd-validation.md` records the PRD process/content validation, user questions, answers, confirmation state, and Demo-generation gate.
 
+Do not delete, rename, or manually edit files in this folder. Use the project creation and rule synchronization tools to update them.

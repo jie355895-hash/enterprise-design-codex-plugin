@@ -35,22 +35,25 @@ Review Demos against WCAG 2.2 AA: text contrast, visible and unobscured focus, k
 
 Run the following sequence for product design work:
 
-1. Receive the request and identify the request type.
+1. Receive the request and identify the request type and product form.
 2. Research the current business, users, process, pain points, evidence, and constraints.
 3. Identify relevant industrial domains and search the central knowledge base.
-4. Define the problem, goal, scope, and out-of-scope content.
+4. Make a preliminary scope judgment: goal, candidate scope, out-of-scope content, evidence, and assumptions.
 5. Assess information completeness and ask every necessary clarification question; there is no fixed question count.
-6. Analyze roles, data scope, permissions, workflow, product form, states, exceptions, and notification type.
+6. Analyze roles, tenants, organization and factory scope, data scope, permissions, workflow, states, exceptions, and notification type.
 7. Design the product solution, information structure, interaction path, and visual direction.
-8. Output a text confirmation draft and wait for user confirmation.
-9. Generate the PRD design file from the confirmed draft.
-10. Show the PRD product summary and wait for PRD confirmation.
-11. Generate the interactive Demo from the confirmed PRD.
-12. Generate Demo-page explanations and Demo notes from the confirmed PRD.
-13. Run automatic checks and AI product-design review.
-14. Let the user view, click, and experience the Demo.
-15. Apply confirmed feedback through the appropriate requirement, PRD, prototype, or Demo change path.
-16. Save new PRD and Demo versions without overwriting confirmed outputs.
+8. Make the final scope decision and output the text confirmation draft; wait for user confirmation.
+9. Generate the PRD design file from the confirmed text draft.
+10. Run one PRD comprehensive validation covering both process and content.
+11. Show the PRD summary, validation results, evidence, impact, suggestions, and necessary questions; wait for the user's answers or confirmation that no issue remains.
+12. Revise and revalidate the PRD when an answer changes scope, roles, permissions, fields, states, or workflow; create a new PRD version instead of overwriting a confirmed version.
+13. Mark the PRD as confirmed only after high-impact issues are cleared and the user confirms the validated PRD.
+14. If a prototype exists, compare the confirmed PRD and prototype before Demo generation and resolve product-intent differences.
+15. Run the Demo-before checklist and generate the interactive Demo from the confirmed PRD.
+16. Generate Demo-page explanations and Demo notes from the confirmed PRD.
+17. Run automatic checks and AI product-design review.
+18. Let the user view, click, and experience the Demo, then capture acceptance and feedback.
+19. Apply confirmed feedback through the appropriate requirement, PRD, prototype, or Demo change path and save new versions without overwriting confirmed outputs.
 
 The text confirmation draft confirms the direction. The PRD is the detailed product design source for the Demo. The Demo is the reviewable interactive expression of the PRD.
 
@@ -111,9 +114,14 @@ Only after the user confirms the draft may Codex generate the PRD.
 
 Create the PRD in `业务内容文档` as a product-facing design file, normally named `PRD_<module>_v1.0.md`. Do not require the user to write it manually.
 
-The PRD must include product background, goals, scope, users, roles, entrances, data objects, fields, page structure, operations, permission boundaries, states, workflows, exceptions, notification handling, explanation content, visual direction, interaction requirements, Demo acceptance criteria, evidence, assumptions, pending items, and out-of-scope content.
+The PRD must include product background, goals, preliminary and final scope, out-of-scope content, users, roles, entrances, tenant and data scope, data objects, fields, field sources and statistical definitions, page structure, operations, permission boundaries, states, workflows, exceptions, notification handling, explanation content, visual direction, interaction requirements, Demo acceptance criteria, evidence, assumptions, pending items, and unresolved questions.
 
-After generating the PRD, show the user a concise product summary and wait for confirmation. This is not a second round of discovery; it is confirmation of the detailed design derived from the approved text draft. Do not generate the Demo before PRD confirmation.
+After generating the PRD, run a single comprehensive validation with two parts:
+
+- Process validation: entrances, role and tenant boundaries, data scope, permission conditions, button preconditions and results, state transitions, normal and exception paths, loading/empty/error/no-permission states, notification handling loops, write-back, audit, cross-module dependencies, and failure recovery.
+- Content validation: goal, scope, roles, fields, data sources, statistical definitions, page structure, operations, Drawer coverage, Demo interactions, acceptance criteria, evidence conflicts, assumptions, and pending items.
+
+Show passed items, process issues, content issues, impact, evidence, suggestions, and only the questions needed to resolve the current uncertainty. There is no fixed question count. Even when no question is needed, wait for the user to confirm that the validated PRD has no issue. High-impact unresolved issues block Demo generation. Low-impact items may proceed as explicit assumptions recorded in the PRD, Demo notes, and version record. Bind the validation record to the PRD version. If the user answers in a way that changes product scope, roles, permissions, fields, states, or workflow, create a new PRD version and revalidate. Do not generate the Demo before the validated PRD is confirmed.
 
 ## Role-driven industrial design
 
@@ -145,6 +153,8 @@ Repeated visual components may share one component-level explanation only when b
 
 Demo notes must carry PRD path and version, Demo-to-PRD source relationship, role differences and evidence, data scope, page entrance, permission assumptions, workflow assumptions, notification handling, adopted knowledge, rejected knowledge, default assumptions, pending items, and unsimulated integrations.
 
+The explanation coverage matrix must also judge the current tenant, company, organization, factory, laboratory, department, and data scope; the current role and permissions; visible content; field meaning and source; button purpose, preconditions, results, and disabled reason; state and workflow context; and risk or audit impact. Explain only content the current role is allowed to see or operate. Explanation content must never bypass tenant or permission isolation.
+
 If the Demo needs an explanation not supported by the PRD, mark it pending or update the PRD first. Do not invent business rules in the Demo.
 
 ## Demo review and acceptance
@@ -174,6 +184,8 @@ The user-facing tool only creates new projects. There is no user-facing sync but
 Codex proposes the target change, waits for confirmation, assesses downstream impact, proposes linked changes, waits for linked confirmation, preserves versions, backs up projects, synchronizes only confirmed control files, and verifies alignment.
 
 The seven independently updateable scopes are: central knowledge base, plugin rules, project template, project creation tool, sync tool, workspace context, and child-project control files.
+
+Product design work and system maintenance work are separate routes. Maintenance does not generate a PRD or Demo. For a maintenance request, identify the target scope and evidence, propose the exact change and version impact, wait for confirmation, update the target, perform a seven-scope impact assessment, show linked changes, wait for linked confirmation, back up projects, synchronize only confirmed control files, preserve all previous versions, and verify final alignment. Changes to workflow gates, UI rules, Drawer rules, versioning, output structure, or project initialization must be synchronized across every affected scope. Public GitHub release is a separate desensitization and release-confirmation step.
 
 ## Project initialization
 

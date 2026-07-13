@@ -1,7 +1,10 @@
 interface:
-  display_name: Enterprise Design Codex Plugin
-  short_description: 企业级产品设计流程与项目自动初始化
-  default_prompt: Use $enterprise-design-project-bootstrap when a project folder is selected for enterprise product-design work.
+  display_name: "Enterprise Design Codex Plugin"
+  short_description: "企业项目初始化与产品设计流程"
+  icon_small: "./assets/project-bootstrap.svg"
+  icon_large: "./assets/project-bootstrap.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $enterprise-design-project-bootstrap before product-design work under the selected workspace root."
 
 policy:
   allow_implicit_invocation: true

@@ -1,7 +1,7 @@
 {
   "knowledgeBase": "bundled-public-reference",
   "version": "KB-PUBLIC-1.0",
-  "sourcePlugin": "1.1.42",
+  "sourcePlugin": "1.1.43",
   "status": "active",
   "usage": "reference-only",
   "privacy": "sanitized-public-content"

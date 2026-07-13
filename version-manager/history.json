@@ -1,7 +1,7 @@
 {
   "plugin": "Enterprise Design Codex Plugin",
-  "version": "V1.1.42",
-  "baseVersion": "V1.1.41",
+  "version": "V1.1.43",
+  "baseVersion": "V1.1.42",
   "releaseType": "sanitized-public-package",
   "changes": [
     "统一插件在 Codex 选择列表中的显示名称",
@@ -12,7 +12,13 @@
     "增加业务内容、Demo、原型和技术依赖的输出物版本管理",
     "增加Ant Design 5、Carbon Design System、WCAG 2.2和ui-ux-pro-max参考层",
     "移除内部项目名称、个人信息、绝对路径、原始项目来源和私有知识快照",
-    "仅保留可公开分发的通用工业产品设计参考"
+    "仅保留可公开分发的通用工业产品设计参考",
+    "增加初步范围与最终范围确认规则",
+    "增加PRD流程与内容综合校验及疑问确认门槛",
+    "明确澄清问题不设固定数量并阻断高影响未决问题进入Demo",
+    "新增公开版prd-validation项目控制模板并修正初始化模板清单",
+    "细化说明Drawer的租户、数据范围、角色、权限、按钮、内容、状态和风险覆盖",
+    "将产品设计流程与七范围维护流程明确分流"
   ],
   "status": "active",
   "privacy": "sanitized-public-content"

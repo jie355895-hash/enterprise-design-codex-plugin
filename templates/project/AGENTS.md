@@ -1,10 +1,12 @@
 # Project Instructions
 
-This project is initialized under the selected workspace root. Product design work follows the nearest workspace instructions and the active Enterprise Design Codex Plugin.
+This project is under `<WORKSPACE_ROOT>`, so all product design work must follow:
+
+`<WORKSPACE_ROOT>\AGENTS.md`
 
 Active plugin:
 
-活动插件：当前 Codex 会话解析到的 Enterprise Design Codex Plugin 最新版本。
+最高版本目录：`<WORKSPACE_ROOT>\00-企业设计插件` 下版本号最高的插件目录。
 
 Do not ignore the workspace product design workflow or explanation rules.
 
@@ -19,18 +21,22 @@ For each update, Codex must first propose the target change and wait for confirm
 1. 需求接收与需求类型识别
 2. 需求调研与证据收集
 3. 相关领域识别与中央知识库检索
-4. 需求定义与范围确认
-5. 需求澄清
-6. 业务分析
+4. 初步范围判断与范围外内容记录
+5. 信息完整度判断与需求澄清
+6. 业务分析：角色、租户、数据、权限、状态、流程和通知
 7. 方案设计
-8. 文字版确认稿
+8. 最终范围确认与文字版确认稿
 9. 用户确认文字版确认稿
-10. 生成PRD设计文件
-11. 用户确认PRD设计文件
-12. 根据PRD生成Demo
-13. 根据PRD生成Demo内说明
-14. Demo自动检查、AI评审和用户体验验收
-15. 迭代与版本保存
+10. 生成PRD草稿
+11. PRD综合校验：流程校验、内容校验、依据核对和疑问整理
+12. 用户回答疑问或确认无问题
+13. 必要时修订PRD并重新综合校验
+14. PRD标记为已确认
+15. 有原型时执行PRD与原型对比校验
+16. Demo前检查并根据已确认PRD生成Demo
+17. 根据PRD生成Demo内说明
+18. Demo自动检查、AI评审和用户体验验收
+19. 迭代与版本保存
 
 ## Mandatory Clarification Gate
 
@@ -78,7 +84,19 @@ Use these confirmation states consistently: `草稿`, `待确认`, `部分确认
 
 文字版确认稿确认后必须生成PRD设计文件。PRD至少包含目标、范围、角色、入口、数据、字段、页面结构、操作、权限、状态、流程、异常、通知、说明内容、视觉方向、Demo交互要求、Demo验收标准、依据、假设和待确认项。
 
-PRD生成后必须等待用户确认。PRD是Demo页面、交互、状态、权限和页面内说明的产品依据，未确认PRD不得生成Demo。
+PRD生成后必须先执行综合校验，再向用户展示PRD摘要、校验结果和疑问。PRD是Demo页面、交互、状态、权限和页面内说明的产品依据，未完成校验和用户确认不得生成Demo。
+
+## PRD综合校验与疑问确认
+
+PRD生成后必须先执行一次综合校验，内部同时检查流程和内容。流程校验覆盖入口、角色、租户、数据范围、权限、按钮条件、状态、异常、通知闭环、数据回写和跨模块依赖；内容校验覆盖目标、范围、字段、数据来源、统计口径、说明 Drawer、Demo要求、验收标准、依据和待确认项。
+
+校验后必须输出通过项、流程问题、内容问题、影响、依据、建议方案和待确认问题。问题数量没有固定限制。即使没有疑问，也要等待用户确认。高影响问题未解决时不得生成Demo；低影响问题必须记录为默认假设。
+
+用户回答影响业务范围、角色、权限、字段、状态或流程时，必须创建新的PRD版本并重新校验。PRD校验记录保存在`CODEX_PLUGIN_DO_NOT_EDIT\prd-validation.md`并与PRD版本绑定。
+
+## Product Design and Maintenance Routing
+
+产品设计任务和系统维护任务分开执行。系统维护任务包括知识库、插件规则、模板、工具、工作区上下文和子项目控制文件更新，执行提案、用户确认、七范围影响评估、联动确认、备份、同步、验证和版本记录；系统维护任务不自动生成PRD或Demo。
 
 ## UI Design Standard
 

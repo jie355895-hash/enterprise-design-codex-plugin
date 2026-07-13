@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise project bootstrap</title>
+  <desc id="desc">A project folder with a document and a confirmation check</desc>
+  <rect width="512" height="512" rx="112" fill="#0F766E"/>
+  <path d="M92 152c0-18 14-32 32-32h108l34 38h122c18 0 32 14 32 32v178c0 18-14 32-32 32H124c-18 0-32-14-32-32V152Z" fill="#D7F5EF"/>
+  <path d="M92 184h328v184c0 18-14 32-32 32H124c-18 0-32-14-32-32V184Z" fill="#8ED8CA"/>
+  <rect x="172" y="178" width="168" height="184" rx="18" fill="#FFFFFF"/>
+  <path d="M208 226h96M208 260h96M208 294h62" stroke="#0F766E" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="360" cy="356" r="70" fill="#2563EB" stroke="#FFFFFF" stroke-width="14"/>
+  <path d="m328 356 22 22 44-50" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

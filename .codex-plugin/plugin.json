@@ -1,6 +1,6 @@
 {
   "name": "enterprise-design-codex-plugin",
-  "version": "1.1.42",
+  "version": "1.1.43",
   "description": "Enterprise product-manager and UI design workflow for SaaS industrial systems, based on external enterprise design standards from research and PRD confirmation to interactive Demo and user acceptance.",
   "author": {
     "name": "Enterprise Design Community"
@@ -17,7 +17,7 @@
     "capabilities": ["Interactive", "Write", "Product Design"],
     "defaultPrompt": [
       "按企业设计流程从需求调研开始分析这个产品需求",
-      "先输出文字确认稿，再生成PRD并根据确认后的PRD生成页面 Demo",
+      "先输出文字确认稿，再生成PRD并完成PRD流程与内容综合校验，确认后根据PRD生成页面 Demo",
       "按外部企业UI标准检查这个 Demo 的视觉、交互和可访问性"
     ],
     "brandColor": "#2563EB"

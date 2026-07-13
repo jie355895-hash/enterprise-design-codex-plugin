@@ -162,7 +162,7 @@ foreach ($folder in @('业务内容文档','Demo','原型','技术依赖','CODEX
 }
 
 $controlFolder = Join-Path $projectRoot 'CODEX_PLUGIN_DO_NOT_EDIT'
-$controlFiles = @('DELIVERY_STRUCTURE.md','demo-before-checklist.md','demo-after-checklist.md','role-permission-matrix.md','visual-acceptance.md','design-confirmation.md','assumptions.md','demo-review.md','output-versioning.md','output-version-manifest.json','knowledge-reference.md')
+$controlFiles = @('DELIVERY_STRUCTURE.md','demo-before-checklist.md','demo-after-checklist.md','role-permission-matrix.md','visual-acceptance.md','design-confirmation.md','assumptions.md','demo-review.md','output-versioning.md','prd-validation.md','README.md','version.json','output-version-manifest.json','knowledge-reference.md')
 foreach ($file in $controlFiles) {
   Add-IfMissing (Join-Path $templateRoot $file) (Join-Path $controlFolder $file) $created $preserved
 }
